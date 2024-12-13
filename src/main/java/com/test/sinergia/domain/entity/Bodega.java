@@ -1,6 +1,5 @@
 package com.test.sinergia.domain.entity;
 
-
 import jakarta.persistence.*;
 
 @Entity

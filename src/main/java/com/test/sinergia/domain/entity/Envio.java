@@ -6,6 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "envios")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Envio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

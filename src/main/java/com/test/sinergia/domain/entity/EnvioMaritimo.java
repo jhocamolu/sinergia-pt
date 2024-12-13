@@ -6,8 +6,9 @@ import java.util.Date;
 
 @Entity
 @Table(name = "envios_maritimos")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class EnvioMaritimo extends Envio {
+public class EnvioMaritimo {
+    @Id
+    private Long id_envio;
 
     @Column(name = "id_puerto")
     private Long idPuerto;
@@ -20,7 +21,6 @@ public class EnvioMaritimo extends Envio {
 
     // Constructor con todos los atributos
     public EnvioMaritimo(Cliente cliente, TipoProducto tipoProducto, Integer cantidad, Date fechaRegistro, Date fechaEntrega, BigDecimal precioNormal, BigDecimal precioDescuento, String numeroGuia, Long idPuerto, String numeroFlota) {
-        super(cliente, tipoProducto, cantidad, fechaRegistro, fechaEntrega, precioNormal, precioDescuento, numeroGuia);
         this.idPuerto = idPuerto;
         this.numeroFlota = numeroFlota;
     }

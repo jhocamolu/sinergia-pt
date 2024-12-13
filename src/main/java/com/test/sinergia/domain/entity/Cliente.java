@@ -1,12 +1,10 @@
 package com.test.sinergia.domain.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
 @Entity
+@Table(name = "clientes")
 public class Cliente {
 
     @jakarta.persistence.Id
